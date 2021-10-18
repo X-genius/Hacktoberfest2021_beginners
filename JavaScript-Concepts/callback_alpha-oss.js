@@ -1,6 +1,6 @@
-// AUTHOR: Monish Shetty
+// AUTHOR: Aman Baghel
 // JavaScript Concept: callback
-// GITHUB: https://github.com/alpha-oss
+// GITHUB: https://github.com/X-genius
 
 //Add your JavaScript concept below
 // callback is a function which  is passed as an argument to another function, 
@@ -8,16 +8,21 @@
 // here process is a function which is passed in another function printTitle as an argument.
 
 
-function process(title) {
-    console.log('Process name: ' + title);
-    }
-    
-function printTitle(myCallback){
-        title = 'Memory Fragmentation';
-    myCallback(title);
+//Example of CallBack Function :
+
+const firstFunction = (name , funcCall) => 
+{
+    console.log(name);
+    funcCall();
 }
-printTitle(process);
 
+const secondFunction = () => 
+{
+    console.log("Second Function Call");
+}
 
-//output 
-//Process name: Memory Fragmentation
+firstFunction("First Function Call" , secondFunction);
+
+//Output for this code :
+//First Function Call
+//Second Function Call
